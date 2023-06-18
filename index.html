@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Teachable Machine</title>
+    <link rel="shortcut icon" href="teachable-machine.jpg" type="image/x-icon" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="style.css" />
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        video#webcam {
+            width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container text-center">
+        <h1>Teachable Machine || Using TensorFlow.JS</h1>
+        <p id="status">Awaiting For TF.js To Load</p>
+
+        <!-- Video Widget -->
+        <video id="webcam" autoplay></video>
+
+        <!-- Buttons -->
+        <div class="mb-3">
+            <button id="enableCam" class="btn btn-primary">Enable Webcam</button>
+            <button class="dataCollector btn btn-primary" data-1hot="0" data-name="Class 1">
+                Gather Class 1 Data
+            </button>
+            <button class="dataCollector btn btn-primary" data-1hot="1" data-name="Class 2">
+                Gather Class 2 Data
+            </button>
+            <button id="train" class="btn btn-primary">Train Your Model</button>
+            <button id="reset" class="btn btn-danger">Reset</button>
+        </div>
+
+        <ol class="text-start">
+            <span style="color: #4285f4;">
+                <li>First Enable Webcam And Allow Access When Asked.</li>
+            </span>
+            <span style="color: #ea4335;">
+                <li>
+                    Now Find An Object, Point The Webcam At It, Click And Hold The
+                    "Gather Class 1 Data" Button To Gather At Least 30 Samples.
+                </li>
+            </span>
+            <span style="color: #fbbc05;">
+                <li>
+                    Repeat For Class 2 With A Different Object Of Interest. Get A
+                    Similar Number Of Samples.
+                </li>
+            </span>
+            <span style="color: #34a853;">
+                <li>
+                    Click "Train Your Model" And Wait While The Model Is Trained Live In
+                    Your Browser. No Data Is Sent To The Server.
+                </li>
+            </span>
+            <span style="color: #673ab7;">
+                <li>
+                    Once Trained, You Will See Live Predictions Appear Above The Video
+                    For What It Thinks It Sees.
+                </li>
+            </span>
+        </ol>
+
+        <footer class="text-center" style="padding: 10px; background-color: bisque">
+            Copyright &copy; 2023 By ::
+            <a href="https://pabitrabanerjee.newsgoogle.org" style="text-decoration: none"><span
+                    style="color: crimson; font-family: cursive">Pabitra Banerjee</span></a>
+        </footer>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@3.11.0/dist/tf.min.js" type="text/javascript"></script>
+    <script type="module" src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,49 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 2em;
+    height: 100%;
+}
+
+h1 {
+    margin-top: 10px !important;
+    font-style: italic;
+    color: #FF6F00;
+}
+
+video {
+    clear: both;
+    display: block;
+    margin: 10px;
+    background: #000000;
+    /* width: 640px;
+    height: 480px; */
+}
+
+button {
+    padding: 10px;
+    float: left;
+    margin: 5px 3px 5px 10px;
+}
+
+ol {
+    clear: both;
+    margin-top: 90px;
+}
+
+.removed {
+    display: none;
+}
+
+#status {
+    font-size: 150%;
+}
+
+@media screen and (max-width: 850px) {
+    h1 {
+        margin-top: 0px !important;
+    }
+
+    body {
+        height: auto;
+    }
+}
